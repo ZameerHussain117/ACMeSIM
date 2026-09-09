@@ -1,0 +1,28 @@
+{
+  "name": "esim-app-backend",
+  "version": "0.1.0",
+  "description": "Backend API for the eSIM marketplace FYP app",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.5.0",
+    "dotenv": "^16.4.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcrypt": "^5.1.1",
+    "stripe": "^16.2.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "eslint-config-prettier": "^9.1.0"
+  }
+}

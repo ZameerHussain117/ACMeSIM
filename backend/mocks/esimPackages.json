@@ -1,0 +1,74 @@
+[
+  {
+    "externalId": "esimgo-mock-fr-5gb-30d",
+    "name": "France 5GB / 30 Days",
+    "type": "local",
+    "countries": ["FR"],
+    "region": "France",
+    "dataAmountMB": 5120,
+    "isUnlimited": false,
+    "validityDays": 30,
+    "price": 12.99,
+    "currency": "USD"
+  },
+  {
+    "externalId": "esimgo-mock-jp-3gb-15d",
+    "name": "Japan 3GB / 15 Days",
+    "type": "local",
+    "countries": ["JP"],
+    "region": "Japan",
+    "dataAmountMB": 3072,
+    "isUnlimited": false,
+    "validityDays": 15,
+    "price": 9.5,
+    "currency": "USD"
+  },
+  {
+    "externalId": "esimgo-mock-eu-10gb-30d",
+    "name": "Europe 10GB / 30 Days",
+    "type": "regional",
+    "countries": ["FR", "DE", "IT", "ES", "NL", "BE", "AT"],
+    "region": "Europe",
+    "dataAmountMB": 10240,
+    "isUnlimited": false,
+    "validityDays": 30,
+    "price": 24.99,
+    "currency": "USD"
+  },
+  {
+    "externalId": "esimgo-mock-asia-8gb-20d",
+    "name": "Asia 8GB / 20 Days",
+    "type": "regional",
+    "countries": ["JP", "KR", "TH", "SG", "MY"],
+    "region": "Asia",
+    "dataAmountMB": 8192,
+    "isUnlimited": false,
+    "validityDays": 20,
+    "price": 19.99,
+    "currency": "USD"
+  },
+  {
+    "externalId": "esimgo-mock-global-20gb-30d",
+    "name": "Global 20GB / 30 Days",
+    "type": "global",
+    "countries": ["*"],
+    "region": "Worldwide",
+    "dataAmountMB": 20480,
+    "isUnlimited": false,
+    "validityDays": 30,
+    "price": 49.99,
+    "currency": "USD"
+  },
+  {
+    "externalId": "esimgo-mock-global-unlimited-7d",
+    "name": "Global Unlimited / 7 Days",
+    "type": "global",
+    "countries": ["*"],
+    "region": "Worldwide",
+    "dataAmountMB": 0,
+    "isUnlimited": true,
+    "validityDays": 7,
+    "price": 34.99,
+    "currency": "USD"
+  }
+]

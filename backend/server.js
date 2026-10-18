@@ -6,11 +6,17 @@ const connectDB = require('./config/db');
 const config = require('./config');
 
 async function start() {
-  await connectDB();
+  try {
+    // Connect to MongoDB before starting the server
+    await connectDB();
 
-  app.listen(config.port, () => {
-    console.log(`[server] Running on http://localhost:${config.port} (${config.nodeEnv})`);
-  });
+    app.listen(config.port, () => {
+      console.log(`[server] Running on http://localhost:${config.port} (${config.nodeEnv})`);
+    });
+  } catch (error) {
+    console.error('[server] Failed to connect to MongoDB:', error);
+    process.exit(1);
+  }
 }
 
 start();

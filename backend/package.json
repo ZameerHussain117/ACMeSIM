@@ -11,18 +11,19 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "express": "^4.19.2",
-    "mongoose": "^8.5.0",
-    "dotenv": "^16.4.5",
-    "jsonwebtoken": "^9.0.2",
     "bcrypt": "^5.1.1",
-    "stripe": "^16.2.0",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "google-auth-library": "^11.3.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.5.0",
+    "stripe": "^16.2.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4",
     "eslint": "^8.57.0",
-    "prettier": "^3.3.3",
-    "eslint-config-prettier": "^9.1.0"
+    "eslint-config-prettier": "^9.1.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3"
   }
 }

@@ -1,5 +1,5 @@
 // Represents an account in the system — either a regular customer or an admin.
-// Note: password is stored as a bcrypt hash, never plain text.
+// Note: password is stored as a bcrypt hash, never plain text (unless logging in via Google).
 
 const mongoose = require('mongoose');
 
@@ -15,7 +15,20 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: true, // stored as a bcrypt hash — hashing happens in the auth service, not here
+      required: function() {
+        // Password is only required if the user signs up locally (not via Google)
+        return this.authProvider === 'local';
+      },
+    },
+    googleId: {
+      type: String,
+      unique: true,
+      sparse: true, // Allows multiple users to have 'null' or missing googleId without breaking uniqueness
+    },
+    authProvider: {
+      type: String,
+      enum: ['local', 'google'],
+      default: 'local',
     },
     role: {
       type: String,
@@ -29,14 +42,17 @@ const userSchema = new mongoose.Schema(
       trim: true,
     },
     profilePicture: {
-      type: String, // URL to an image, e.g. stored in S3/Cloud storage
+      type: String, // URL to an image, e.g. stored in S3/Cloud storage or Google profile pic
       default: null,
     },
 
     // --- Account state ---
     isVerified: {
       type: Boolean,
-      default: false, // flips to true once the signup OTP is confirmed
+      default: function() {
+        // Google accounts are already verified by Google
+        return this.authProvider === 'google';
+      }, 
     },
     rewardPoints: {
       type: Number,

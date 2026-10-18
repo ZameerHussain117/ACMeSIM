@@ -9,7 +9,7 @@ async function connectDB() {
     await mongoose.connect(config.mongoUri);
     console.log(`[db] Connected to MongoDB at ${config.mongoUri}`);
   } catch (err) {
-    console.error('[db] MongoDB connection failed:', err.message);
+    console.error('[db] MongoDB connection failed!!!:', err.message);
     // Fail fast — there's no point running an API server that can't reach its database.
     process.exit(1);
   }

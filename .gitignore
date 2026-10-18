@@ -3,5 +3,5 @@ node_modules/
 *.log
 .DS_Store
 .expo/
-dist/
+dist/y
 build/
